@@ -8,17 +8,24 @@
 </ion-header>
 
 <ion-content padding>
+  <p>
+    Username : {{username}}
+    <br>
+    Password : {{password}}
+  </p>
  <ion-list>
 
   <ion-item>
     <ion-label stacked>Username</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="username"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label stacked>Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
   </ion-item>
+  
   <button ion-button full>Sign in</button>
 </ion-list>
+
 </ion-content>

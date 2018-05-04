@@ -7,8 +7,12 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  username:string;
+  password:string;
 
+  constructor(public navCtrl: NavController) {
+    this.username = '';
+    this.password = '';
   }
 
 }
