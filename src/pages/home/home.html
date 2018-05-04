@@ -8,11 +8,7 @@
 </ion-header>
 
 <ion-content padding>
-  <p>
-    Username : {{username}}
-    <br>
-    Password : {{password}}
-  </p>
+  
  <ion-list>
 
   <ion-item>
@@ -25,7 +21,7 @@
     <ion-input type="password" [(ngModel)]="password"></ion-input>
   </ion-item>
   
-  <button ion-button full>Sign in</button>
+  <button ion-button full (click)="showAlert(username,password)">Sign in</button>
 </ion-list>
 
 </ion-content>
