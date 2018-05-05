@@ -17,7 +17,7 @@ export class HomePage {
   
   showAlert(user: string,pass: string){
     //console.log('User: '+user+'PAss: '+pass);
-    if(user != '' && user == 'admin'){
+    if(user != '' && user == 'admin' && pass == '1234'){
       let alert = this.alertCtrl.create({
         title: 'สวัสดี',
         subTitle: 'ยินดีต้อนรับ ['+user+'] เข้าสู่ระบบประเมิน, สามารถตรวจสอบรายการของท่านได้เลย!',
