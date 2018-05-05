@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { AccountPage } from '../pages/account/account';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,7 +18,8 @@ import { ShowreportallPage } from '../pages/showreportall/showreportall';
     HomePage,
     ListPage,
     ShowreportallPage,
-    AccountPage
+    AccountPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { ShowreportallPage } from '../pages/showreportall/showreportall';
     HomePage,
     ListPage,
     ShowreportallPage,
-    AccountPage
+    AccountPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
