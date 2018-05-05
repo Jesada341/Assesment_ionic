@@ -37,7 +37,7 @@ export class LoginPage {
       let alert = this.alertCtrl.create({
         title: 'เข้าสู่ระบบไม่สำเร็จ',
         subTitle: 'กรุณากรอกรหัสเข้าใช้งานให้ถูกต้อง',
-        buttons: ['OK']
+        buttons: ['รับทราบ']
       });
       alert.present();
     }

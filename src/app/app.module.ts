@@ -11,6 +11,7 @@ import { LoginPage } from '../pages/login/login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ShowreportallPage } from '../pages/showreportall/showreportall';
+import { LoginProvider } from '../providers/login/login';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ShowreportallPage } from '../pages/showreportall/showreportall';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LoginProvider
   ]
 })
 export class AppModule {}

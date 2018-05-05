@@ -24,10 +24,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage,icon: 'home' },
-      { title: 'List', component: ListPage,icon: 'checkmark-circle-outline' },
-      { title: 'Show report all',component: ShowreportallPage,icon: 'clipboard'},
-      { title: 'Account',component: AccountPage,icon: 'person'}
+      { title: 'หน้าแรก', component: HomePage,icon: 'home' },
+      { title: 'รายการ', component: ListPage,icon: 'checkmark-circle-outline' },
+      { title: 'รายงาน',component: ShowreportallPage,icon: 'clipboard'},
+      { title: 'บัญชี',component: AccountPage,icon: 'person'}
     ];
 
   }
