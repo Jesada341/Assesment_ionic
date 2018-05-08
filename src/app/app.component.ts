@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { ShowreportallPage } from '../pages/showreportall/showreportall';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
+import { FormPage } from '../pages/form/form';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +28,8 @@ export class MyApp {
       { title: 'หน้าแรก', component: HomePage,icon: 'home' },
       { title: 'รายการ', component: ListPage,icon: 'checkmark-circle-outline' },
       { title: 'รายงาน',component: ShowreportallPage,icon: 'clipboard'},
-      { title: 'บัญชี',component: AccountPage,icon: 'person'}
+      { title: 'บัญชี',component: AccountPage,icon: 'person'},
+      { title: 'ประเมิน',component: FormPage,icon: 'ios-book'}
     ];
 
   }

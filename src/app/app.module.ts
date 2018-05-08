@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
+import { FormPage } from '../pages/form/form';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +23,8 @@ import { HttpModule } from '@angular/http';
     ListPage,
     ShowreportallPage,
     AccountPage,
-    LoginPage
+    LoginPage,
+    FormPage
   ],
   imports: [
     BrowserModule,
