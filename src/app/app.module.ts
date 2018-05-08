@@ -38,7 +38,8 @@ import { HttpModule } from '@angular/http';
     ListPage,
     ShowreportallPage,
     AccountPage,
-    LoginPage
+    LoginPage,
+    FormPage
   ],
   providers: [
     StatusBar,
