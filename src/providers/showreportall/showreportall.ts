@@ -15,9 +15,9 @@ export class ShowreportallProvider {
     //console.log('Hello ShowreportallProvider Provider');
 
   }
-  getAcY(){
+  getAllForm(){
     return new Promise((resolve, reject) => {
-      let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/reportall.php/getAcY";
+      let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/reportall.php/getAllForm";
 
       this.http.get(url)
         .map(res => res.json()).subscribe(data => {
@@ -25,17 +25,17 @@ export class ShowreportallProvider {
         })
     });
   }
-  getTerm(){
-    return new Promise((resolve, reject) => {
-      let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/reportall.php/getTerm";
+  // getTerm(){
+  //   return new Promise((resolve, reject) => {
+  //     let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/reportall.php/getTerm";
 
-      this.http.get(url)
-        .map(res => res.json()).subscribe(data => {
-          resolve(data);
-        })
-    });
+  //     this.http.get(url)
+  //       .map(res => res.json()).subscribe(data => {
+  //         resolve(data);
+  //       })
+  //   });
   
-  }
+  // }
   
 
 }

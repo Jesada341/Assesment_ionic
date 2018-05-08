@@ -21,19 +21,25 @@
   <ion-item>
     <ion-label>ปีการศึกษา</ion-label>
     <ion-select [(ngModel)]="YearStudy" multiple="true" cancelText="ยกเลิก" okText="ตกลง">
-      <ion-option  *ngFor="let AcY of coAcY">{{AcY.coAcY}}</ion-option>
+<ion-option *ngFor="let Year of Evu_year">{{Year.Evu_year}}</ion-option>
     </ion-select>
   </ion-item>
 </ion-list>
 <ion-list>
   <ion-item>
     <ion-label>ภาคการศึกษา</ion-label>
-    <ion-select [(ngModel)]="Term" multiple="true" cancelText="ยกเลิก" okText="ตกลง">
-      <ion-option [value]=" ">ทุกภาคการศึกษา</ion-option>
-      <ion-option *ngFor="let termName of tmName">{{termName.tmName}}</ion-option>
+    <ion-select [(ngModel)]="TermStudy" multiple="true" cancelText="ยกเลิก" okText="ตกลง">
+        <ion-option *ngFor="let term of Evu_term">{{term.Evu_term}}</ion-option>
+
+
     </ion-select>
   </ion-item>
 </ion-list>
-<button ion-button   (click)="SearchList(YearStudy,Term )">ค้นหา</button>
+<button ion-button (click)="SearchList(YearStudy,TermStudy )">ค้นหา</button>
+
+
+
+
+
 
 </ion-content>

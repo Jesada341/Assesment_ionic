@@ -14,22 +14,26 @@ import { ShowreportallProvider } from "../../providers/showreportall/showreporta
   templateUrl: 'showreportall.html',
 })
 export class ShowreportallPage {
-  public coAcY : number ;
-  public tmName :String[];
+  public Evu_year : number ;
+  public Evu_term: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams ,public report:ShowreportallProvider) {
-    this.report.getAcY().then((data: any)=>{
+    this.report.getAllForm().then((data: any)=>{
       console.log(data);
-      this.coAcY = data;
+      this.Evu_year = data;
+    })
+    this.report.getAllForm().then((data: any) => {
+      console.log(data);
+      this.Evu_term = data;
     })
 
-    this.report.getTerm().then((data: any) => {
-      console.log(data);
-      this.tmName = data;
-    })
+    // this.report.getTerm().then((data: any) => {
+    //   console.log(data);
+    //   this.tmName = data;
+    // })
   }
-  SearchList(YearStudy : number,Term : String){
-    console.log(YearStudy+ " "+ Term);
+  SearchList(YearStudy: number, TermStudy : number){
+    console.log(YearStudy + " " + TermStudy);
 
   }
   ionViewDidLoad() {
