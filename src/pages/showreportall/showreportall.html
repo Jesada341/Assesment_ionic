@@ -20,15 +20,15 @@
 <ion-list>
   <ion-item>
     <ion-label>ปีการศึกษา</ion-label>
-    <ion-select [(ngModel)]="YearStudy" multiple="true" cancelText="ยกเลิก" okText="ตกลง">
-<ion-option *ngFor="let Year of Evu_year">{{Year.Evu_year}}</ion-option>
+    <ion-select [(ngModel)]="YearStudy"  cancelText="ยกเลิก" okText="ตกลง">
+      <ion-option *ngFor="let Year of Evu_year">{{Year.Evu_year}}</ion-option>
     </ion-select>
   </ion-item>
 </ion-list>
 <ion-list>
   <ion-item>
     <ion-label>ภาคการศึกษา</ion-label>
-    <ion-select [(ngModel)]="TermStudy" multiple="true" cancelText="ยกเลิก" okText="ตกลง">
+<ion-select [(ngModel)]="TermStudy"  cancelText="ยกเลิก" okText="ตกลง">
         <ion-option *ngFor="let term of Evu_term">{{term.Evu_term}}</ion-option>
 
 

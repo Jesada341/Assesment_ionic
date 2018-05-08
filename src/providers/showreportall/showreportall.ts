@@ -25,17 +25,18 @@ export class ShowreportallProvider {
         })
     });
   }
-  // getTerm(){
-  //   return new Promise((resolve, reject) => {
-  //     let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/reportall.php/getTerm";
 
-  //     this.http.get(url)
-  //       .map(res => res.json()).subscribe(data => {
-  //         resolve(data);
-  //       })
-  //   });
+  getYear(){
+    return new Promise((resolve, reject) => {
+      let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/reportall.php/getYear";
+
+      this.http.get(url)
+        .map(res => res.json()).subscribe(data => {
+          resolve(data);
+        })
+    });
   
-  // }
+  }
   
 
 }

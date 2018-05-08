@@ -18,7 +18,7 @@ export class ShowreportallPage {
   public Evu_term: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams ,public report:ShowreportallProvider) {
-    this.report.getAllForm().then((data: any)=>{
+    this.report.getYear().then((data: any)=>{
       console.log(data);
       this.Evu_year = data;
     })
