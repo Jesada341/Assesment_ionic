@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ShowreportallProvider } from "../../providers/showreportall/showreportall";
+import { ShowscorePage } from '../showscore/showscore';
+
 
 /**
  * Generated class for the ShowreportallPage page.
@@ -16,6 +18,8 @@ import { ShowreportallProvider } from "../../providers/showreportall/showreporta
 export class ShowreportallPage {
   public Evu_year : number ;
   public Evu_term: number;
+  public acYear : number;
+  public acTerm : number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams ,public report:ShowreportallProvider) {
     this.report.getYear().then((data: any)=>{
@@ -32,11 +36,19 @@ export class ShowreportallPage {
     //   this.tmName = data;
     // })
   }
-  SearchList(YearStudy: number, TermStudy : number){
+ 
+  SearchList(YearStudy , TermStudy){
+    
     console.log(YearStudy + " " + TermStudy);
+    this.navCtrl.push(ShowscorePage,{
+      acYear : YearStudy, 
+      acTerm : TermStudy
+    });
+   
 
   }
   ionViewDidLoad() {
+
 
   }
 

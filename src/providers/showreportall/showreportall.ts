@@ -35,7 +35,19 @@ export class ShowreportallProvider {
           resolve(data);
         })
     });
-  
+  }
+
+  CheckStatusAssest(acYear,acTerm) {
+    return new Promise((resolve, reject) => {
+      let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/reportall.php/CheckStatusAssest?acYear="+ acYear +"&acTerm="+ acTerm;
+      console.log(url);
+
+      this.http.get(url)
+        .map(res => res.json()).subscribe(data => {
+          resolve(data);
+        })
+    });
+
   }
   
 

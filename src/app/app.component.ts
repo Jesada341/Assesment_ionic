@@ -10,6 +10,7 @@ import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { FormPage } from '../pages/form/form';
 
+
 @Component({
   templateUrl: 'app.html'
 })
