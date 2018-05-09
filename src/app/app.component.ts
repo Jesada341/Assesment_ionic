@@ -9,6 +9,7 @@ import { ShowreportallPage } from '../pages/showreportall/showreportall';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { FormPage } from '../pages/form/form';
+import { ShowassessPage } from '../pages/showassess/showassess';
 
 
 @Component({
@@ -30,7 +31,8 @@ export class MyApp {
       { title: 'รายการ', component: ListPage,icon: 'checkmark-circle-outline' },
       { title: 'รายงาน',component: ShowreportallPage,icon: 'clipboard'},
       { title: 'บัญชี',component: AccountPage,icon: 'person'},
-      { title: 'ประเมิน',component: FormPage,icon: 'ios-book'}
+      { title: 'ประเมิน',component: FormPage,icon: 'ios-book'},
+      { title: 'รายการประเมิน',component: ShowassessPage,icon: 'list-box'}
     ];
 
   }

@@ -7,6 +7,7 @@ import { ListPage } from '../pages/list/list';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { FormPage } from '../pages/form/form';
+import { ShowassessPage } from '../pages/showassess/showassess';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -26,7 +27,8 @@ import { ShowscorePage } from '../pages/showscore/showscore';
     AccountPage,
     LoginPage,
     FormPage,
-    ShowscorePage
+    ShowscorePage,
+    ShowassessPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { ShowscorePage } from '../pages/showscore/showscore';
     AccountPage,
     LoginPage,
     FormPage,
-    ShowscorePage
+    ShowscorePage,
+    ShowassessPage
   ],
   providers: [
     StatusBar,
