@@ -17,6 +17,7 @@ import { LoginProvider } from '../providers/login/login';
 import { ShowreportallProvider } from '../providers/showreportall/showreportall';
 import { HttpModule } from '@angular/http';
 import { ShowscorePage } from '../pages/showscore/showscore';
+import { ShowscoreProvider } from '../providers/showscore/showscore';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ShowscorePage } from '../pages/showscore/showscore';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
-    ShowreportallProvider
+    ShowreportallProvider,
+    ShowscoreProvider
   ]
 })
 export class AppModule {}

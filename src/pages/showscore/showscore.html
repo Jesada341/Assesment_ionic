@@ -14,5 +14,20 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-card *ngFor="let evu of result" text-wrap>
+      <ion-item>
+        <h2>{{evu.Evu_name}}</h2>
+        <ion-list *ngFor="let tp of evu.Evu_data">
+          <ion-item>
+              <h3>{{tp.Topic_name}}</h3>
+              <ion-item *ngFor="let sub of tp.Sub_data">
+                  <h3>{{sub.Sub_name}}</h3>
+                  <h3>คะแนน: {{sub.Point}}</h3>
+              </ion-item>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+    </ion-card>
+  </ion-list>
 </ion-content>
