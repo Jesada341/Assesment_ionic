@@ -1,5 +1,7 @@
+import { LoginProvider } from './../../providers/login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
+// import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import { HomePage } from '../home/home';
 
 /**
@@ -18,14 +20,20 @@ export class LoginPage {
   username:string;
   password:string;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
-    this.username = '';
-    this.password = '';
+  constructor(
+    public navCtrl: NavController
+    ,public navParams: NavParams
+    ,private alertCtrl: AlertController
+    ,public loginCtrl: LoginProvider
+    ) {
   }
   
-  showAlert(user: string,pass: string){
-    //console.log('User: '+user+'PAss: '+pass);
-    if(user != '' && user == 'admin' && pass == 'admin'){
+  showAlert(user: string, pass: string){
+    this.loginCtrl.doLogin(this.username,this.password)
+    .then((data: any)=>{
+      // alert(JSON.stringify(data));
+
+      if(data != ''){
       let alert = this.alertCtrl.create({
         title: 'สวัสดี',
         subTitle: 'ยินดีต้อนรับ ['+user+'] เข้าสู่ระบบประเมิน, สามารถตรวจสอบรายการของท่านได้เลย!',
@@ -41,6 +49,10 @@ export class LoginPage {
       });
       alert.present();
     }
+
+
+    });
+    
   }
 
 }
