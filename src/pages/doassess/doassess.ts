@@ -37,7 +37,6 @@ export class DoassessPage {
 
     console.log(this.acYear + " " + this.acTerm);
   }
-
 }
 
 interface Evu {
