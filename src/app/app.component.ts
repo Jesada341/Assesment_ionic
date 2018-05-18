@@ -10,7 +10,7 @@ import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { FormPage } from '../pages/form/form';
 import { ShowassessPage } from '../pages/showassess/showassess';
-
+import { DoassessPage } from '../pages/doassess/doassess';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,7 +18,7 @@ import { ShowassessPage } from '../pages/showassess/showassess';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any, icon: any}>;
 
@@ -30,9 +30,10 @@ export class MyApp {
       { title: 'หน้าแรก', component: HomePage,icon: 'home' },
       { title: 'รายการ', component: ListPage,icon: 'checkmark-circle-outline' },
       { title: 'รายงาน',component: ShowreportallPage,icon: 'clipboard'},
-      { title: 'บัญชี',component: AccountPage,icon: 'person'},
       { title: 'ประเมิน',component: FormPage,icon: 'ios-book'},
-      { title: 'รายการประเมิน',component: ShowassessPage,icon: 'list-box'}
+      { title: 'รายการประเมิน',component: ShowassessPage,icon: 'list-box'},
+      { title: 'แบม', component: DoassessPage,icon: 'list-box'},
+      { title: 'บัญชี',component: AccountPage,icon: 'person'}
     ];
 
   }
