@@ -17,9 +17,6 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html'
 })
 export class LoginPage {
-  username: string;
-  password: string;
-
   constructor(
     public navCtrl: NavController
     , public navParams: NavParams
@@ -29,19 +26,15 @@ export class LoginPage {
   }
 
   showAlert(user: string, pass: string) {
-    this.loginCtrl.doLogin(this.username, this.password)
+    this.loginCtrl.doLogin(user, pass)
       .then((data: any) => {
-        // alert(JSON.stringify(data));asd
-
         if (data != '') {
           let alert = this.alertCtrl.create({
-            title: 'สวัสดี',
-            subTitle: 'ยินดีต้อนรับ [' + user + '] เข้าสู่ระบบประเมิน, สามารถตรวจสอบรายการของท่านได้เลย!',
+            subTitle: 'เข้าสู่ระบบสำเร็จ!',
             buttons: ['รับทราบ']
           });
           alert.present();
-          this.navCtrl.push(HomePage, data);
-          this.navCtrl.setRoot(HomePage);
+          this.navCtrl.setRoot(HomePage, {user_data: data});
         } else {
           let alert = this.alertCtrl.create({
             title: 'เข้าสู่ระบบไม่สำเร็จ',
@@ -50,8 +43,6 @@ export class LoginPage {
           });
           alert.present();
         }
-
-
       });
 
   }

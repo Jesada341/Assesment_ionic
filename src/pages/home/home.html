@@ -8,5 +8,14 @@
 </ion-header>
 
 <ion-content padding>
-  
+  <ion-item *ngFor="let user of data">
+    <ion-card>
+      <img src="http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/img_avatar.png" width="10%" height="auto" />
+      <ion-card-content>
+        <ion-card-title>
+          {{user.ionic_prefix}}{{user.ionic_fname}} {{user.ionic_lname}}
+        </ion-card-title>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
 </ion-content>
