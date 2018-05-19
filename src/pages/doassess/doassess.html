@@ -21,24 +21,21 @@ i : number;
         <ion-list *ngFor="let tp of evu.Evu_data">
           <ion-item>
             <h3>{{tp.Topic_name}}</h3>
-            <ion-item *ngFor="let sub of tp.Sub_data">
-              <!-- <ion-row> -->
-                <!-- <ion-col> -->
-                  <h3>{{sub.Sub_name}}</h3>
-                <!-- </ion-col> -->
-                <!-- <ion-col>
-                  <ion-select interface="popover" [(ngModel)]= " 'Point'. i" placeholder="Click For Set Point?">
-                    <ion-option value="1">น้อยที่สุด</ion-option>
-                    <ion-option value="2">น้อย</ion-option>
-                    <ion-option value="3">ปานกลาง</ion-option>
-                    <ion-option value="4">มาก</ion-option>
-                    <ion-option value="5">มากที่สุด</ion-option>
-                  </ion-select>
-                  
-                </ion-col> -->
-                <!-- </ion-row> -->
+            <ion-row *ngFor="let sub of tp.Sub_data">
+              <ion-col col-6 >
+                <h3>{{sub.Sub_name}}</h3>
+                </ion-col>
 
-            </ion-item>
+                <!-- <ion-select col-6 interface="popover"  placeholder="Click For Set Point?">
+                      <ion-option value="1">น้อยที่สุด</ion-option>
+                      <ion-option value="2">น้อย</ion-option>
+                      <ion-option value="3">ปานกลาง</ion-option>
+                      <ion-option value="4">มาก</ion-option>
+                      <ion-option value="5">มากที่สุด</ion-option>
+                    </ion-select> -->
+              
+            </ion-row>
+
           </ion-item>
         </ion-list>
       </ion-item>
