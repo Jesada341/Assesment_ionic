@@ -26,7 +26,7 @@ export class DoassessPage {
     //   console.log(data);
     // });
 
-    this.score.get_score(this.acYear, this.acTerm).then((data: any) => {
+    this.score.Show_question(this.acYear, this.acTerm).then((data: any) => {
       console.log(data);
       this.result = data;
     });
