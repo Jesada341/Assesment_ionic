@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { DoassessPage } from '../doassess/doassess';
 
 /**
  * Generated class for the ShowassessPage page.
@@ -20,6 +21,12 @@ export class ShowassessPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShowassessPage');
+  }
+
+  doAssess(){
+    console.log('doAssess function');
+    this.navCtrl.push(DoassessPage,{
+    });
   }
 
 }

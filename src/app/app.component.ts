@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { ShowreportallPage } from '../pages/showreportall/showreportall';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
@@ -28,11 +27,10 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'หน้าแรก', component: HomePage,icon: 'home' },
-      { title: 'รายการ', component: ListPage,icon: 'checkmark-circle-outline' },
+      { title: 'การประเมิน',component: ShowassessPage,icon: 'list-box'},
       { title: 'รายงาน',component: ShowreportallPage,icon: 'clipboard'},
-      { title: 'ประเมิน',component: FormPage,icon: 'ios-book'},
-      { title: 'รายการประเมิน',component: ShowassessPage,icon: 'list-box'},
-      { title: 'แบม', component: DoassessPage,icon: 'list-box'},
+      // { title: 'ประเมิน',component: FormPage,icon: 'ios-book'},
+      // { title: 'แบม', component: DoassessPage,icon: 'list-box'},
       { title: 'บัญชี',component: AccountPage,icon: 'person'}
     ];
 

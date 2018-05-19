@@ -3,7 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { FormPage } from '../pages/form/form';
@@ -24,7 +23,6 @@ import { ShowscoreProvider } from '../providers/showscore/showscore';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     ShowreportallPage,
     AccountPage,
     LoginPage,
@@ -42,7 +40,6 @@ import { ShowscoreProvider } from '../providers/showscore/showscore';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     ShowreportallPage,
     AccountPage,
     LoginPage,

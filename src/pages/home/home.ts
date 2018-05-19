@@ -11,12 +11,11 @@ export class HomePage {
   data: any;
   constructor(public navCtrl: NavController, public NavParams: NavParams) {
     
-    this.data = this.NavParams.get('user_data');
+    
     
   }
   ionViewDidLoad(){
-  //  console.log('Home=>\n');
-  //  console.log(this.data);
+    this.data = this.NavParams.get('user_data');
   }
 }
 // interface user {

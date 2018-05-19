@@ -7,12 +7,39 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>showassess</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>การประเมิน</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-card (click)="doAssess()">
 
+    <ion-card-header>
+      แบบประเมินประสิทธิภาพการสอนของอาจารย์และสิ่งสนับสนุนการเรียนรู้ในการฝึกภาคปฏิบัติ
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          ประเมินตามช่วงเวลา ตั้งแต่วันที่ 19 พฤษภาคม 2561 - 19 พฤษภาคม 2561
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+            พย.๑๔๒๐ การพยาบาลครอบครัวและชุมชน ๒
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+              นางสาวกษมา แตงเพชร์
+            </ion-col>
+          </ion-row>
+    </ion-card-content>
+
+  </ion-card>
 </ion-content>
