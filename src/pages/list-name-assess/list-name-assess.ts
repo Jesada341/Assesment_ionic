@@ -28,9 +28,10 @@ export class ListNameAssessPage {
     this.ListAssess.get_FormAssess(this.acYear, this.acTerm).then((data:any)=>{
       console.log(data);
       this.Evu_name = data;
+      this.Subject_name = data;
     })
   }
-
+//ลองคอมเม้น
 
 
   ionViewDidLoad() {
