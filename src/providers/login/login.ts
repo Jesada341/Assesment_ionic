@@ -33,9 +33,9 @@ export class LoginProvider {
 
   }
 
-  Show_question(acYear: any, acTerm: any) {
+  get_score(acYear: any, acTerm: any) {
     return new Promise((resolve, reject) => {
-      let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/Show_question.php?acYear=" + 2 + "&acTerm=" + 1;
+      let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/sqlreport.php?acYear=" + 2560 + "&acTerm=" + 1;
       this.http.get(url)
         .map(res => res.json()).subscribe(data => {
           resolve(data);

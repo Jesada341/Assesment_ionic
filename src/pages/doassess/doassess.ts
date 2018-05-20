@@ -15,18 +15,18 @@ import { LoginProvider } from './../../providers/login/login';
   templateUrl: 'doassess.html',
 })
 export class DoassessPage {
-  Teacher_of_evu: number;
-  Subject_of_form: number;
+  acYear: number;
+  acTerm: number;
   public result: Evu[];
   constructor(public navCtrl: NavController, public navParams: NavParams, private score: LoginProvider) {
-    this.Teacher_of_evu = this.navParams.get('acYear');
-    this.Subject_of_form = this.navParams.get('acTerm');
+    this.acYear = this.navParams.get('acYear');
+    this.acTerm = this.navParams.get('acTerm');
 
     // this.score.CheckStatusAssest(this.acYear,this.acTerm).then((data: any) => {
     //   console.log(data);
     // });
 
-    this.score.Show_question(this.Teacher_of_evu, this.Subject_of_form).then((data: any) => {
+    this.score.get_score(this.acYear, this.acTerm).then((data: any) => {
       console.log(data);
       this.result = data;
     });
@@ -35,7 +35,7 @@ export class DoassessPage {
 
   ionViewDidLoad() {
 
-    console.log(this.Teacher_of_evu + " " + this.Subject_of_form);
+    console.log(this.acYear + " " + this.acTerm);
   }
 }
 
