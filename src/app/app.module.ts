@@ -18,6 +18,7 @@ import { ShowreportallProvider } from '../providers/showreportall/showreportall'
 import { HttpModule } from '@angular/http';
 import { ShowscorePage } from '../pages/showscore/showscore';
 import { ShowscoreProvider } from '../providers/showscore/showscore';
+import { ListNameAssessPage } from '../pages/list-name-assess/list-name-assess';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ShowscoreProvider } from '../providers/showscore/showscore';
     FormPage,
     ShowscorePage,
     ShowassessPage,
+    ListNameAssessPage,
     DoassessPage
   ],
   imports: [
@@ -46,6 +48,7 @@ import { ShowscoreProvider } from '../providers/showscore/showscore';
     FormPage,
     ShowscorePage,
     ShowassessPage,
+    ListNameAssessPage,
     DoassessPage
   ],
   providers: [

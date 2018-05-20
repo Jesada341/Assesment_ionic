@@ -14,9 +14,10 @@
 
 
 <ion-content padding>
-  <ion-list>
+  
+  <ion-list>  
     <ion-card *ngFor="let evu of result" text-wrap>
-      <ion-item>
+      <ion-item >
         <h2>{{evu.Evu_name}}</h2>
         <ion-list *ngFor="let tp of evu.Evu_data">
           <ion-item>
