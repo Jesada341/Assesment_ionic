@@ -9,7 +9,7 @@ import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { FormPage } from '../pages/form/form';
 import { ShowassessPage } from '../pages/showassess/showassess';
-import { DoassessPage } from '../pages/doassess/doassess';
+// import { DoassessPage } from '../pages/doassess/doassess';
 
 @Component({
   templateUrl: 'app.html'
