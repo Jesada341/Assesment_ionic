@@ -18,6 +18,7 @@ export class DoassessPage {
   Teacher_of_evu: number;
   Subject_of_form: number;
   public result: Evu[];
+  public scr:Score[];
   constructor(public navCtrl: NavController, public navParams: NavParams, private score: LoginProvider) {
     this.Teacher_of_evu = this.navParams.get('acYear');
     this.Subject_of_form = this.navParams.get('acTerm');
@@ -30,6 +31,10 @@ export class DoassessPage {
       console.log(data);
       this.result = data;
     });
+    this.score.show_score().then((datas: any) => {
+      console.log(datas);
+      this.scr = datas;
+    });
 
   }
 
@@ -37,6 +42,10 @@ export class DoassessPage {
 
     console.log(this.Teacher_of_evu + " " + this.Subject_of_form);
   }
+}
+interface Score{
+  scr_name: string;
+  scr_point: string;
 }
 
 interface Evu {
