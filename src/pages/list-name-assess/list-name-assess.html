@@ -20,9 +20,13 @@
     <h1>รายการแบบประเมิน</h1>
   </ion-card-header>
 
-  <ion-card-content>
-    <ion-item *ngFor="let AssessName of Evu_name ">
+<ion-card-content >
+<ion-item *ngFor="let AssessName of Evu_name " (click)=ListTechOfSubject(AssessName)>
+
+
          {{AssessName.Evu_name}}
+        {{AssessName.Evu_id}}
+
     </ion-item>
   </ion-card-content>
 </ion-card>

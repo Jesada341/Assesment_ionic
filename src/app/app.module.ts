@@ -19,6 +19,7 @@ import { HttpModule } from '@angular/http';
 import { ShowscorePage } from '../pages/showscore/showscore';
 import { ShowscoreProvider } from '../providers/showscore/showscore';
 import { ListNameAssessPage } from '../pages/list-name-assess/list-name-assess';
+import { ListTeachFormPage } from '../pages/list-teach-form/list-teach-form';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ListNameAssessPage } from '../pages/list-name-assess/list-name-assess';
     ShowscorePage,
     ShowassessPage,
     ListNameAssessPage,
+    ListTeachFormPage,
     DoassessPage
   ],
   imports: [
@@ -49,6 +51,7 @@ import { ListNameAssessPage } from '../pages/list-name-assess/list-name-assess';
     ShowscorePage,
     ShowassessPage,
     ListNameAssessPage,
+    ListTeachFormPage,
     DoassessPage
   ],
   providers: [
