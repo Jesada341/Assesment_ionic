@@ -7,7 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ShowreportallPage } from '../pages/showreportall/showreportall';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
-import { FormPage } from '../pages/form/form';
+// import { FormPage } from '../pages/form/form';
 import { ShowassessPage } from '../pages/showassess/showassess';
 // import { DoassessPage } from '../pages/doassess/doassess';
 
@@ -17,7 +17,7 @@ import { ShowassessPage } from '../pages/showassess/showassess';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any, icon: any}>;
 
