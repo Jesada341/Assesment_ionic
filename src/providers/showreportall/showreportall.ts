@@ -49,6 +49,19 @@ export class ShowreportallProvider {
     });
 
   }
+
+  get_TeachSubjectForm(Evu_id) {
+    return new Promise((resolve, reject) => {
+      let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/reportall.php/get_TeachSubjectForm?Evu_id=" + Evu_id;
+      console.log(url);
+
+      this.http.get(url)
+        .map(res => res.json()).subscribe(data => {
+          resolve(data);
+        })
+    });
+
+  }
   
 
 }

@@ -18,32 +18,36 @@ import { ListTeachFormPage } from '../list-teach-form/list-teach-form';
 export class ListNameAssessPage {
   acYear: number;
   acTerm: number;
+  Evu_id : String[];
   Evu_name:String[];
   Subject_code :String[];
   Subject_name :String[];
-  Teacher_name :String[];
+
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams ,public ListAssess:ShowreportallProvider) {
     this.acYear = this.navParams.get('acYear');
     this.acTerm = this.navParams.get('acTerm');
 
     this.ListAssess.get_FormAssess(this.acYear, this.acTerm).then((data:any)=>{
-      //console.log(data);
       this.Evu_name = data;
-     
+      this.Evu_id = data;
+      console.log(data);
      
     })
   }
 //ลองคอมเม้น
-  ListTechOfSubject(Evu_name) {
-    console.log(Evu_name);
+  ListTechOfSubject(Evu_id) {
+    console.log(Evu_id+"asdasdasdasdasdasdasd");
     this.navCtrl.push(ListTeachFormPage, {
-      LTOFS : Evu_name
+      acEvu_id : Evu_id
     });
   }
 
   ionViewDidLoad() {
-    console.log(this.acYear + " " + this.acTerm);
+  
   }
+  
 
 }
+

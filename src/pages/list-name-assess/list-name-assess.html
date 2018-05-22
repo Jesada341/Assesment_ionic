@@ -21,13 +21,17 @@
   </ion-card-header>
 
 <ion-card-content >
-<ion-item *ngFor="let AssessName of Evu_name " (click)=ListTechOfSubject(AssessName)>
+
+<ion-item *ngFor="let AssessId of Evu_id ; let AssessName of Evu_name" (click)=ListTechOfSubject(AssessId.Evu_id)>
 
 
-         {{AssessName.Evu_name}}
-        {{AssessName.Evu_id}}
+ {{AssessId.Evu_id}}
+ {{AssessName.Evu_name}}
+
 
     </ion-item>
+
+
   </ion-card-content>
 </ion-card>
 
