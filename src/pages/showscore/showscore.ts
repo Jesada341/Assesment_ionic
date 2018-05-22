@@ -16,10 +16,9 @@ import { ShowscoreProvider } from '../../providers/showscore/showscore';
 })
 export class ShowscorePage {
 
-  Evu_id : String[];
-  Teacher_id: String[];
+  Evu_id : number;
+  Teacher_id: number;
   public result : Evu[];
-  status : number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams ,private score:ShowscoreProvider) {//, private score: ShowreportallProvider
     this.Evu_id = this.navParams.get('acEvuForm_id');

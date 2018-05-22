@@ -14,9 +14,11 @@ export class ShowscoreProvider {
     console.log('Hello ShowscoreProvider Provider');
   }
 
-  get_score(acYear:any,acTerm:any) {
+  get_score(Evu_id:any,Teacher_id:any) {
+    console.log(Evu_id +" ค่าาาา" + Teacher_id);
+    
     return new Promise((resolve, reject) => {
-      let url ="http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/sqlreport.php?acYear=" + acYear + "&acTerm=" + acTerm;
+      let url ="http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/sqlreport.php?Evu_id=" + Evu_id + "&Teacher_id=" + Teacher_id;
       this.http.get(url)
         .map(res => res.json()).subscribe(data => {
           resolve(data);
