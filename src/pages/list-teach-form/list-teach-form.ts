@@ -22,6 +22,8 @@ export class ListTeachFormPage {
   Teacher_lastname: String[];
   Subject_code: String[];
   Subject_name: String[];
+  Evu_name : String[];
+  
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public ListTeachSubject: ShowreportallProvider) {
@@ -35,6 +37,7 @@ export class ListTeachFormPage {
       this.Teacher_lastname = data;
       this.Subject_code = data;
       this.Subject_name = data;
+      this.Evu_name =data;
       console.log(data);
 
     })

@@ -14,9 +14,15 @@
 
 <ion-content padding>
 <ion-card-content>
-  <ion-item *ngFor="let TeachOfSubject of Teacher_name ">
-    <p>asdasd</p>
- {{TeachOfSubject.Teacher_name}}
+  <ion-item >
+    <h1>รายวิชา และชื่ออาจารย์ผู้สอน</h1>
+  </ion-item>
+<ion-item *ngFor="let TeachOfSubjectFName of Teacher_name ;let TeachOfSubjectLName of Teacher_lastname ; let TeachOfSubjectP of Teacher_prefix ;let TeachOfSubjectName of Subject_name ; let TeachOfSubjectCode of Subject_code">
+
+ {{TeachOfSubjectCode.Subject_code}}
+ {{TeachOfSubjectName.Subject_name}}
+<p>{{TeachOfSubjectP.Teacher_prefix}} {{TeachOfSubjectFName.Teacher_name}} {{TeachOfSubjectLName.Teacher_lastname}} </p>
+
 
   </ion-item>
 </ion-card-content>
