@@ -17,14 +17,22 @@
   <ion-item >
     <h1>รายวิชา และชื่ออาจารย์ผู้สอน</h1>
   </ion-item>
-<ion-item *ngFor="let TeachOfSubjectFName of Teacher_name ;let TeachOfSubjectLName of Teacher_lastname ; let TeachOfSubjectP of Teacher_prefix ;let TeachOfSubjectName of Subject_name ; let TeachOfSubjectCode of Subject_code">
+<ion-item *ngFor="let TeachOfSubjectFName of Teacher_name ;
+                  let TeachOfSubjectLName of Teacher_lastname ; 
+                  let TeachOfSubjectP of Teacher_prefix ;
+                  let TeachOfSubjectName of Subject_name ; 
+                  let TeachOfSubjectCode of Subject_code ; 
+                  let TeachOfSubjectId of Teacher_id;
+                  let FormAssess of Evu_id ;" (click) = "ShowScore(FormAssess.Evu_id,TeachOfSubjectId.Teacher_id)">
 
- {{TeachOfSubjectCode.Subject_code}}
- {{TeachOfSubjectName.Subject_name}}
-<p>{{TeachOfSubjectP.Teacher_prefix}} {{TeachOfSubjectFName.Teacher_name}} {{TeachOfSubjectLName.Teacher_lastname}} </p>
 
+            <h2>Teacher_id {{TeachOfSubjectId.Teacher_id}}</h2>
+            <h2> Evu_id {{FormAssess.Evu_id}}</h2>
 
-  </ion-item>
+            {{TeachOfSubjectCode.Subject_code}}
+            {{TeachOfSubjectName.Subject_name}}<br>
+            <a>{{TeachOfSubjectP.Teacher_prefix}} {{TeachOfSubjectFName.Teacher_name}} {{TeachOfSubjectLName.Teacher_lastname}} </a>
+
+</ion-item>
 </ion-card-content>
-
 </ion-content>

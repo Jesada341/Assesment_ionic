@@ -41,13 +41,7 @@ export class ShowreportallPage {
     // })
   }
  
-  // SearchList(YearStudy , TermStudy){
-  //   console.log(YearStudy + " " + TermStudy);
-  //   this.navCtrl.push(ShowscorePage,{
-  //     acYear : YearStudy, 
-  //     acTerm : TermStudy
-  //   });
-  // }
+ 
 
   ListAssessName(YearStudy, TermStudy) {
     console.log(YearStudy + " " + TermStudy);

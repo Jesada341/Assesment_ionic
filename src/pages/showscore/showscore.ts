@@ -16,18 +16,18 @@ import { ShowscoreProvider } from '../../providers/showscore/showscore';
 })
 export class ShowscorePage {
 
-  acYear : number;
-  acTerm : number;
+  Evu_id : String[];
+  Teacher_id: String[];
   public result : Evu[];
   status : number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams ,private score:ShowscoreProvider) {//, private score: ShowreportallProvider
-    this.acYear = this.navParams.get('acYear');
-    this.acTerm = this.navParams.get('acTerm');
+    this.Evu_id = this.navParams.get('acEvuForm_id');
+    this.Teacher_id = this.navParams.get('acTeacher_id');
 
 
     
-    this.score.get_score(this.acYear,this.acTerm).then((data: any) => {
+    this.score.get_score(this.Evu_id, this.Teacher_id).then((data: any) => {
       console.log(data);
       this.result = data;
      
@@ -37,7 +37,7 @@ export class ShowscorePage {
 
   ionViewDidLoad() {
    
-    console.log(this.acYear+" "+this.acTerm);
+    console.log(this.Evu_id + " " + this.Teacher_id);
   }
 
 }
