@@ -40,7 +40,7 @@ export class DoassessPage {
 
 
   save_score(topic_scr, sub_scr, scr) {
-    console.log('atp_id : ' + topic_scr + ' srb_score : ' + sub_scr + ' score ' + scr);
+    console.log('	Point_sub_of_question : ' + topic_scr + '	Point_sub : ' + sub_scr + ' Point ' + scr);
     // this.score_all.insert_score(this.topic, this.pointteach, topic_scr, sub_scr, scr).then((data: any) => {
     //   console.log(data);
     // });
