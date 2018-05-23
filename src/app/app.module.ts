@@ -20,6 +20,7 @@ import { ShowscorePage } from '../pages/showscore/showscore';
 import { ShowscoreProvider } from '../providers/showscore/showscore';
 import { ListNameAssessPage } from '../pages/list-name-assess/list-name-assess';
 import { ListTeachFormPage } from '../pages/list-teach-form/list-teach-form';
+import { DaassessProvider } from '../providers/daassess/daassess';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { ListTeachFormPage } from '../pages/list-teach-form/list-teach-form';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
     ShowreportallProvider,
-    ShowscoreProvider
+    ShowscoreProvider,
+    DaassessProvider
   ]
 })
 export class AppModule {}

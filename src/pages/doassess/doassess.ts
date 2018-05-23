@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginProvider } from './../../providers/login/login';
+import { NgModel } from '@angular/forms';
 
 /**
  * Generated class for the DoassessPage page.
@@ -15,38 +16,37 @@ import { LoginProvider } from './../../providers/login/login';
   templateUrl: 'doassess.html',
 })
 export class DoassessPage {
+  topic: String = "1";
+  pointteach: String = "1";
+  topic_scr: String[];
+  sub_scr: String[];
+  scr: String[];
   Teacher_of_evu: number;
   Subject_of_form: number;
   public result: Evu[];
-  public scr:Score[];
   constructor(public navCtrl: NavController, public navParams: NavParams, private score: LoginProvider) {
     this.Teacher_of_evu = this.navParams.get('acYear');
     this.Subject_of_form = this.navParams.get('acTerm');
-
-    // this.score.CheckStatusAssest(this.acYear,this.acTerm).then((data: any) => {
-    //   console.log(data);
-    // });
 
     this.score.Show_question(this.Teacher_of_evu, this.Subject_of_form).then((data: any) => {
       console.log(data);
       this.result = data;
     });
-    this.score.show_score().then((datas: any) => {
-      console.log(datas);
-      this.scr = datas;
-    });
-
   }
 
   ionViewDidLoad() {
-
     console.log(this.Teacher_of_evu + " " + this.Subject_of_form);
   }
+
+
+  save_score(topic_scr, sub_scr, scr) {
+    console.log('atp_id : ' + topic_scr + ' srb_score : ' + sub_scr + ' score ' + scr);
+    // this.score_all.insert_score(this.topic, this.pointteach, topic_scr, sub_scr, scr).then((data: any) => {
+    //   console.log(data);
+    // });
+  }
 }
-interface Score{
-  scr_name: string;
-  scr_point: string;
-}
+
 
 interface Evu {
   Evu_name: string;

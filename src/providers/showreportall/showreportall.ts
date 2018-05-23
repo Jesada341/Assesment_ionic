@@ -60,8 +60,5 @@ export class ShowreportallProvider {
           resolve(data);
         })
     });
-
   }
-  
-
 }
