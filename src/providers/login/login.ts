@@ -33,17 +33,18 @@ export class LoginProvider {
 
   }
 
-  Show_question(acYear: any, acTerm: any) {
+  Show_question(teacher_form: any, form_id: any) {
     return new Promise((resolve, reject) => {
-      let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/Show_question.php?acYear=" + 2 + "&acTerm=" + 1;
+      let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/Show_question.php?acYear=" + teacher_form + "&acTerm=" + form_id;
       this.http.get(url)
         .map(res => res.json()).subscribe(data => {
           resolve(data);
         })
     });
+    
     // console.log(this.http.get(url));
   }
-
+  
   Show_assess() {
     return new Promise((resolve, reject) => {
       let url = "http://10.80.39.17/TSP58/nursing/index.php/amis/Mobile/Ionic/Service/showAssess";
@@ -54,15 +55,4 @@ export class LoginProvider {
     });
   }
 
-
-  // show_score() {
-  //   return new Promise((resolve, reject) => {
-  //     let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/csvjson.json";
-  //     this.http.get(url)
-  //       .map(res => res.json()).subscribe(data => {
-  //         resolve(data);
-  //       })
-  //   });
-  //   // console.log(this.http.get(url));
-  // }
 }
