@@ -25,8 +25,8 @@ export class DoassessPage {
   Subject_of_form: number;
   public result: Evu[];
   constructor(public navCtrl: NavController, public navParams: NavParams, private score: LoginProvider) {
-    this.Teacher_of_evu = this.navParams.get('acYear');
-    this.Subject_of_form = this.navParams.get('acTerm');
+    this.Teacher_of_evu = this.navParams.get('Teacher_id');
+    this.Subject_of_form = this.navParams.get('Form_id');
 
     this.score.Show_question(this.Teacher_of_evu, this.Subject_of_form).then((data: any) => {
       console.log(data);

@@ -23,7 +23,7 @@
                   let TeachOfSubjectName of Subject_name ; 
                   let TeachOfSubjectCode of Subject_code ; 
                   let TeachOfSubjectId of Teacher_id;
-                  let FormAssess of Evu_id ;" (click) = "ShowScore(FormAssess.Evu_id,TeachOfSubjectId.Teacher_id)">
+                  let FormAssess of Evu_id ;" >
 
 
             <!-- <h2>Teacher_id {{TeachOfSubjectId.Teacher_id}}</h2>
@@ -31,7 +31,8 @@
 
             {{TeachOfSubjectCode.Subject_code}}
             {{TeachOfSubjectName.Subject_name}}<br>
-            <a>{{TeachOfSubjectP.Teacher_prefix}} {{TeachOfSubjectFName.Teacher_name}} {{TeachOfSubjectLName.Teacher_lastname}} </a>
+            <a (click) = "ShowScore(FormAssess.Evu_id,TeachOfSubjectId.Teacher_id)">
+              {{TeachOfSubjectP.Teacher_prefix}} {{TeachOfSubjectFName.Teacher_name}} {{TeachOfSubjectLName.Teacher_lastname}} </a>
 
 </ion-item>
 </ion-card-content>

@@ -35,8 +35,8 @@ export class ShowassessPage {
   doAssess(){
     console.log('doAssess function');
     this.navCtrl.push(DoassessPage,{
-      acYear: 2,
-      acTerm: 1
+      Teacher_id: 2,
+      Form_id: 1
     });
   }
 

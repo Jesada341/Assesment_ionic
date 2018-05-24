@@ -18,7 +18,7 @@
 
 <ion-content padding>
   <ion-item *ngFor="let rs of assess" >
-  <ion-card (click)="doAssess()">
+  <ion-card>
 
     <ion-card-header text-wrap>
         {{rs.ionic_sa_type}}
@@ -36,8 +36,8 @@
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col>
-          {{rs.ionic_prefix}}{{rs.ionic_fname}} {{rs.ionic_lname}}
+        <ion-col (click)="doAssess()">
+          <a>{{rs.ionic_prefix}}{{rs.ionic_fname}} {{rs.ionic_lname}}</a>
         </ion-col>
       </ion-row>
     </ion-card-content>
