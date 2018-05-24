@@ -44,6 +44,16 @@ export class LoginProvider {
     // console.log(this.http.get(url));
   }
 
+  save_score(topic_scr, sub_scr, scr){
+    // return new Promise((resolve, reject) => {
+    //   let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/Show_question.php?Teacher_of_evu=" + Teacher_of_evu + "&Subject_of_form=" + Subject_of_form;
+    //   this.http.get(url)
+    //     .map(res => res.json()).subscribe(data => {
+    //       resolve(data);
+    //     })
+    // });
+  }
+
   Show_assess() {
     return new Promise((resolve, reject) => {
       let url = "http://10.80.39.17/TSP58/nursing/index.php/amis/Mobile/Ionic/Service/showAssess";

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginProvider } from './../../providers/login/login';
 import { NgModel } from '@angular/forms';
+import { Http, Headers, RequestOptions } from "@angular/http";
 
 /**
  * Generated class for the DoassessPage page.
@@ -32,6 +33,7 @@ export class DoassessPage {
       console.log(data);
       this.result = data;
     });
+
   }
 
   ionViewDidLoad() {
@@ -45,6 +47,24 @@ export class DoassessPage {
     //   console.log(data);
     // });
   }
+  // insertData() {
+  //   var headers = new Headers();
+  //   headers.append('Content-Type', 'application/x-www-form-urlencoded');
+  //   let options = new RequestOptions({ headers: headers });
+
+  //   let postParams = {
+  //     topic_scr : this.topic_scr,
+  //     sub_scr: this.sub_scr,
+  //     scr: this.scr,
+  //   }
+  //   this.http.post("http://localhost:9090/restexample/RestController.php?view=insert", JSON.stringify(postParams), options)
+  //     .subscribe(data => {
+  //       console.log(data['_body']);
+  //     }, error => {
+  //       console.log(error);// Error getting the data
+  //     });
+  // }
+
 }
 
 
