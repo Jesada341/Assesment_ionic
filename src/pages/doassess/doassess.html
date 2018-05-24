@@ -29,15 +29,15 @@
                 <ion-col col-12>
                   <ion-list radio-group>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="score.{{o+1}}.{{i+1}}.{{k+1}}" value="1" (click)="save_score(i+1, k+1,1)"> น้อยที่สุด
+                    <input type="radio" name="score[{{o+1}}][{{i+1}}][{{k+1}}]" value="1" (click)="save_score(k+1,i+1,1)"> น้อยที่สุด
                     <br> &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="score.{{o+1}}.{{i+1}}.{{k+1}}" value="2" (click)="save_score(i+1, k+1,2)"> น้อย
+                    <input type="radio" name="score[{{o+1}}][{{i+1}}][{{k+1}}]" value="2" (click)="save_score(k+1,i+1,2)"> น้อย
                     <br> &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="score.{{o+1}}.{{i+1}}.{{k+1}}" value="3" (click)="save_score(i+1, k+1,3)"> ปานกลาง
+                    <input type="radio" name="score[{{o+1}}][{{i+1}}][{{k+1}}]" value="3" (click)="save_score(k+1,i+1,3)"> ปานกลาง
                     <br> &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="score.{{o+1}}.{{i+1}}.{{k+1}}" value="4" (click)="save_score(i+1, k+1,4)"> มาก
+                    <input type="radio" name="score[{{o+1}}][{{i+1}}][{{k+1}}]" value="4" (click)="save_score(k+1,i+1,4)"> มาก
                     <br> &nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="score.{{o+1}}.{{i+1}}.{{k+1}}" value="5" (click)="save_score(i+1, k+1,5)"> มากที่สุด
+                    <input type="radio" name="score[{{o+1}}][{{i+1}}][{{k+1}}]" value="5" (click)="save_score(k+1,i+1,5)"> มากที่สุด
                   </ion-list>
                 </ion-col>
               </ion-row>
@@ -46,7 +46,7 @@
         </ion-list>
       </ion-item>
       <ion-item>
-        <button ion-button>บันทึก</button>
+        <button ion-button (click)="Submit()">บันทึก</button>
       </ion-item>
     </ion-card>
   </ion-list>

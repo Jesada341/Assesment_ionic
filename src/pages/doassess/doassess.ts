@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginProvider } from './../../providers/login/login';
 import { NgModel } from '@angular/forms';
-import { Http, Headers, RequestOptions } from "@angular/http";
+import { Http, Headers, RequestOptions } from '@angular/http';
+// import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/map';
+import { ShowassessPage } from '../showassess/showassess';
 
 /**
  * Generated class for the DoassessPage page.
@@ -17,10 +20,11 @@ import { Http, Headers, RequestOptions } from "@angular/http";
   templateUrl: 'doassess.html',
 })
 export class DoassessPage {
-  topic: String = "1";
-  pointteach: String = "1";
+  // topic: String = "1";
+  // pointteach: String = "1";
+  round: number = 0;
   topic_scr: String[];
-  sub_scr: String[];
+  sub_scr: any;
   scr: String[];
   Teacher_of_evu: number;
   Subject_of_form: number;
@@ -34,6 +38,14 @@ export class DoassessPage {
       this.result = data;
     });
 
+    // this.score.save_score(this.sub_scr, this.topic_scr,this.Subject_of_form, this.scr, this.Teacher_of_evu).then((data: any) => {
+    //   // console.log('	Point_sub_of_question : ' + this.topic_scr + '	Point_sub : ' + this.sub_scr + ' Point ' + this.scr + 'form_id' + this.Subject_of_form + 'teacher_id' + this.Teacher_of_evu);
+    //   // this.result = data;
+    //   // this.score_all.insert_score(this.topic, this.pointteach, topic_scr, sub_scr, scr).then((data: any) => {
+    //   //   console.log(data);
+    //   // });
+    // });
+
   }
 
   ionViewDidLoad() {
@@ -41,10 +53,34 @@ export class DoassessPage {
   }
 
 
-  save_score(topic_scr, sub_scr, scr) {
-    console.log('	Point_sub_of_question : ' + topic_scr + '	Point_sub : ' + sub_scr + ' Point ' + scr);
+  save_score(sub_scr, topic_scr, scr) {
+    // console.log('	index1 : ' + sub_scr + '	index2 : ' + topic_scr + ' index3 ' + this.Subject_of_form + 'index4 ' + scr + 'index5 ' +this.Teacher_of_evu);
+
+    this.score.save_score(sub_scr,topic_scr, this.Subject_of_form, scr, this.Teacher_of_evu).subscribe((response) => {
+      console.log("add log :" + response);
+      this.result = response;
+      // console.log(this.result.status + " : " + this.result.err_txt);
+      // if (this.result.status) {
+      //   this.skilldata.get_skill().subscribe((response) => {
+      //     this.skill_lists = response;
+      //   });
+      // }
+    });
+
+  }
+
+  Insert(sub_scr, point, scr) {
+    for (var i = 0; i < scr; i++) {
+      console.log('point:' + point + 'index' + sub_scr[i][i][i]);
+    }
+    // console.log('	Point_sub_of_question : ' + topic_scr + '	Point_sub : ' + sub_scr + ' Point ' + scr);
+    // this.score.save_score(this.sub_scr, this.topic_scr, this.Subject_of_form, this.scr, this.Teacher_of_evu).then((data: any) => {
+    // console.log('	Point_sub_of_question : ' + this.topic_scr + '	Point_sub : ' + this.sub_scr + ' Point ' + this.scr + 'form_id' + this.Subject_of_form + 'teacher_id' + this.Teacher_of_evu);
+    // this.result = data;
     // this.score_all.insert_score(this.topic, this.pointteach, topic_scr, sub_scr, scr).then((data: any) => {
     //   console.log(data);
+    // });
+
     // });
   }
   // insertData() {
@@ -64,7 +100,12 @@ export class DoassessPage {
   //       console.log(error);// Error getting the data
   //     });
   // }
-
+  Submit(Evu_id) {
+    console.log("asdasdasdasdasdasdasd");
+    this.navCtrl.push(ShowassessPage, {
+      
+    });
+  }
 }
 
 
