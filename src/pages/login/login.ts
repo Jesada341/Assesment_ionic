@@ -18,13 +18,9 @@ import { HomePage } from '../home/home';
 })
 export class LoginPage {
   constructor(
-    public navCtrl: NavController
-    , public navParams: NavParams
-    // , private alertCtrl: AlertController
-    , public loginCtrl: LoginProvider
-    , public toastCtrl: ToastController
-  ) {
-  }
+    public navCtrl: NavController, public navParams: NavParams, public loginCtrl: LoginProvider, public toastCtrl: ToastController) {
+    
+    }
 
   showAlert(user: string, pass: string) {
     this.loginCtrl.doLogin(user, pass)

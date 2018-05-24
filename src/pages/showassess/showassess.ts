@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DoassessPage } from '../doassess/doassess';
-
+import { LoginProvider } from './../../providers/login/login';
 /**
  * Generated class for the ShowassessPage page.
  *
@@ -15,12 +15,21 @@ import { DoassessPage } from '../doassess/doassess';
   templateUrl: 'showassess.html',
 })
 export class ShowassessPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  assess: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams,public loginCtrl: LoginProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ShowassessPage');
+    this.loginCtrl.Show_assess()
+    .then((data: any) => {
+      if (data != '') {
+        console.log(data);
+        this.assess = data;
+      } else {
+        this.assess = '';
+      }
+    });
   }
 
   doAssess(){

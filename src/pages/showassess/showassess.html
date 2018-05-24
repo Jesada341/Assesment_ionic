@@ -17,29 +17,31 @@
 
 
 <ion-content padding>
+  <ion-item *ngFor="let rs of assess" >
   <ion-card (click)="doAssess()">
 
-    <ion-card-header>
-      แบบประเมินประสิทธิภาพการสอนของอาจารย์และสิ่งสนับสนุนการเรียนรู้ในการฝึกภาคปฏิบัติ
+    <ion-card-header text-wrap>
+        {{rs.ionic_sa_type}}
     </ion-card-header>
 
-    <ion-card-content>
+    <ion-card-content text-wrap>
       <ion-row>
         <ion-col>
-          ประเมินตามช่วงเวลา ตั้งแต่วันที่ 19 พฤษภาคม 2561 - 19 พฤษภาคม 2561
+          ประเมิน{{rs.ionic_sa_datetype}} ตั้งแต่วันที่ {{rs.ionic_sa_datest}} ถึง {{rs.ionic_sa_dateen}}
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          พย.๑๔๒๐ การพยาบาลครอบครัวและชุมชน ๒
+           วิชา: {{rs.ionic_sa_subj}}
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          นางสาวกษมา แตงเพชร์
+          {{rs.ionic_prefix}}{{rs.ionic_fname}} {{rs.ionic_lname}}
         </ion-col>
       </ion-row>
     </ion-card-content>
 
   </ion-card>
+</ion-item>
 </ion-content>
