@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { DoassessPage } from '../doassess/doassess';
 import { LoginProvider } from './../../providers/login/login';
 /**
@@ -17,7 +17,7 @@ import { LoginProvider } from './../../providers/login/login';
 export class ListDoassessPage {
   type: any;
   data: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams,public loginCtrl: LoginProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public loginCtrl: LoginProvider,public toastCtrl: ToastController) {
     this.type = this.navParams.get('Type');
   }
 
@@ -29,7 +29,11 @@ export class ListDoassessPage {
         console.log(data);
         this.data = data;
       } else {
-        this.data = '';
+        let toast = this.toastCtrl.create({
+          message: 'ไม่มีแบบประเมิน',
+          duration: 3000
+        });
+        toast.present();
       }
     });
   }

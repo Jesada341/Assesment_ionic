@@ -10,28 +10,14 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>การประเมิน</ion-title>
+    <ion-title>แบบประเมิน</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-item *ngFor="let rs of assess" >
-  <ion-card (click)="doAssess(rs.Evu_id)">
-
-    <ion-card-header text-wrap>
-        {{rs.Evu_name}}
-    </ion-card-header>
-
-    <ion-card-content text-wrap>
-      <ion-row>
-        <ion-col>
-          ประเมิน{{rs.ionic_sa_datetype}} ตั้งแต่วันที่ {{rs.ionic_sa_datest}} ถึง {{rs.ionic_sa_dateen}}
-        </ion-col>
-      </ion-row>
-    </ion-card-content>
-
-  </ion-card>
-</ion-item>
+  <ion-item *ngFor="let rs of assess" (click)="doAssess(rs.Evu_id)">
+    {{rs.Evu_id}} {{rs.Evu_name}}
+  </ion-item>
 </ion-content>

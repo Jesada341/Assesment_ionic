@@ -19,10 +19,10 @@
       <h1>รายวิชา และชื่ออาจารย์ผู้สอน</h1>
     </ion-item>
     <ion-item *ngFor="let rs of data">
-      {{rs.ionic_sa_subj}}
+      {{rs.Subject_code}} {{rs.Subject_name}}
       <br>
-      <a (click) = "doAssess(rs.Evu_id,rs.ionic_accId)">
-        {{rs.ionic_prefix}}{{rs.ionic_fname}} {{rs.ionic_lname}}
+      <a (click) = "doAssess(rs.Teacher_id,rs.Evu_id)">
+        {{rs.Teacher_prefix}}{{rs.Teacher_name}} {{rs.Teacher_lastname}}
       </a>
 
     </ion-item>
