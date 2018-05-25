@@ -50,8 +50,10 @@ export class LoginProvider {
     var headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     let options = new RequestOptions({ headers: headers });
-    let url = "http://10.80.39.17/TSP58/nursing/application/controllers/amis/Mobile/Ionic/Service/insert_point";
+    let url = "http://10.80.39.17/TSP58/nursing/index.php/amis/Mobile/Ionic/Service/insert_point";
+    console.log(url);
     let param = "sub_scr=" + sub_scr + "&topic_scr=" + topic_scr + "&form_id=" + form_id + "&scr=" + scr + "&teacher_id=" + teacher_id;
+    // let param;
     return this.http.post(url, param, options).map((res) => res.json());
   }
 
