@@ -31,7 +31,7 @@ export class MyApp {
       { title: 'รายงาน',component: ShowreportallPage,icon: 'clipboard'},
       // { title: 'ประเมิน',component: FormPage,icon: 'ios-book'},
       // { title: 'แบม', component: DoassessPage,icon: 'list-box'},
-      { title: 'บัญชี',component: AccountPage,icon: 'person'}
+      { title: 'ออกจากระบบ',component: AccountPage,icon: 'person'}
     ];
 
   }

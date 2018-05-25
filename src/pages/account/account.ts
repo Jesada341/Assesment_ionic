@@ -17,12 +17,10 @@ import { LoginPage } from '../login/login';
 export class AccountPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public app: App) {
-  }
-
-  goLogin(){
     this.navCtrl.setRoot(LoginPage);
     let nav = this.app.getRootNav();
     nav.setRoot(LoginPage);
   }
+
 
 }

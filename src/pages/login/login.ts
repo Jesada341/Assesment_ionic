@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 // import { IonicPage, NavController, NavParams} from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { GrobalData } from '../grobal-data';
 
 /**
  * Generated class for the LoginPage page.
@@ -31,7 +32,15 @@ export class LoginPage {
             duration: 3000
           });
           toast.present();
-          this.navCtrl.setRoot(HomePage, {user_data: data});
+          console.log(data);
+          
+          GrobalData.prototype.ionic_prefix = data[0].ionic_prefix;
+          GrobalData.prototype.ionic_fname = data[0].ionic_fname;
+          GrobalData.prototype.ionic_lname = data[0].ionic_lname;
+          GrobalData.prototype.ionic_img = data[0].ionic_img;
+          console.log(GrobalData.prototype.ionic_prefix + " "+GrobalData.prototype.ionic_fname+ " "+GrobalData.prototype.ionic_lname+" "+GrobalData.prototype.ionic_img);
+          
+          this.navCtrl.setRoot(HomePage);
         } else {
           let toast = this.toastCtrl.create({
             message: 'Login fail!',
