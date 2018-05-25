@@ -21,7 +21,7 @@
     <ion-item *ngFor="let rs of data">
       {{rs.ionic_sa_subj}}
       <br>
-      <a (click) = "doAssess()">
+      <a (click) = "doAssess(rs.Evu_id,rs.ionic_accId)">
         {{rs.ionic_prefix}}{{rs.ionic_fname}} {{rs.ionic_lname}}
       </a>
 

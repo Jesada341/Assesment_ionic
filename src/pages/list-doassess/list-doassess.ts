@@ -34,11 +34,11 @@ export class ListDoassessPage {
     });
   }
 
-  doAssess(){
+  doAssess(t:any,f:any){
     console.log('doAssess function');
     this.navCtrl.push(DoassessPage,{
-      Teacher_id: 2,
-      Form_id: 1
+      Teacher_id: t,
+      Form_id: f
     });
   }
 
