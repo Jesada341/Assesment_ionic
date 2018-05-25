@@ -64,6 +64,15 @@ export class LoginProvider {
         })
     });
   }
+  Show_assess2(type:any) {
+    return new Promise((resolve, reject) => {
+      let url = "http://10.80.39.17/TSP58/nursing/index.php/amis/Mobile/Ionic/Service/showAssessTeach/"+type;
+      this.http.get(url)
+        .map(res => res.json()).subscribe(data => {
+          resolve(data);
+        })
+    });
+  }
 
 
   // show_score() {

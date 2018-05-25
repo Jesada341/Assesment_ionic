@@ -18,26 +18,16 @@
 
 <ion-content padding>
   <ion-item *ngFor="let rs of assess" >
-  <ion-card>
+  <ion-card (click)="doAssess(rs.Evu_id)">
 
     <ion-card-header text-wrap>
-        {{rs.ionic_sa_type}}
+        {{rs.Evu_name}}
     </ion-card-header>
 
     <ion-card-content text-wrap>
       <ion-row>
         <ion-col>
           ประเมิน{{rs.ionic_sa_datetype}} ตั้งแต่วันที่ {{rs.ionic_sa_datest}} ถึง {{rs.ionic_sa_dateen}}
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-           วิชา: {{rs.ionic_sa_subj}}
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col (click)="doAssess()">
-          <a>{{rs.ionic_prefix}}{{rs.ionic_fname}} {{rs.ionic_lname}}</a>
         </ion-col>
       </ion-row>
     </ion-card-content>

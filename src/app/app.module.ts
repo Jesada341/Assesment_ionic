@@ -21,6 +21,7 @@ import { ShowscoreProvider } from '../providers/showscore/showscore';
 import { ListNameAssessPage } from '../pages/list-name-assess/list-name-assess';
 import { ListTeachFormPage } from '../pages/list-teach-form/list-teach-form';
 import { DaassessProvider } from '../providers/daassess/daassess';
+import { ListDoassessPage } from '../pages/list-doassess/list-doassess';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DaassessProvider } from '../providers/daassess/daassess';
     ShowassessPage,
     ListNameAssessPage,
     ListTeachFormPage,
-    DoassessPage
+    DoassessPage,
+    ListDoassessPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ import { DaassessProvider } from '../providers/daassess/daassess';
     ShowassessPage,
     ListNameAssessPage,
     ListTeachFormPage,
-    DoassessPage
+    DoassessPage,
+    ListDoassessPage
   ],
   providers: [
     StatusBar,

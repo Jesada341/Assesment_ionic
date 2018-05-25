@@ -10,12 +10,12 @@ export class HomePage {
   // public result : user[];
   data: any;
   constructor(public navCtrl: NavController, public NavParams: NavParams) {
-    
+    this.data = this.NavParams.get('user_data');
     
     
   }
   ionViewDidLoad(){
-    this.data = this.NavParams.get('user_data');
+    
   }
 }
 // interface user {

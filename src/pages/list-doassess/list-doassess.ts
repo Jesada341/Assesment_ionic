@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ListDoassessPage } from '../list-doassess/list-doassess';
+import { DoassessPage } from '../doassess/doassess';
 import { LoginProvider } from './../../providers/login/login';
 /**
- * Generated class for the ShowassessPage page.
+ * Generated class for the ListDoassessPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,32 +11,34 @@ import { LoginProvider } from './../../providers/login/login';
 
 @IonicPage()
 @Component({
-  selector: 'page-showassess',
-  templateUrl: 'showassess.html',
+  selector: 'page-list-doassess',
+  templateUrl: 'list-doassess.html',
 })
-export class ShowassessPage {
-  type: number;
-  assess: any;
+export class ListDoassessPage {
+  type: any;
+  data: any;
   constructor(public navCtrl: NavController, public navParams: NavParams,public loginCtrl: LoginProvider) {
+    this.type = this.navParams.get('Type');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ShowassessPage');
-    this.loginCtrl.Show_assess()
+    console.log('ionViewDidLoad ListDoassessPage');
+    this.loginCtrl.Show_assess2(this.type)
     .then((data: any) => {
       if (data != '') {
         console.log(data);
-        this.assess = data;
+        this.data = data;
       } else {
-        this.assess = '';
+        this.data = '';
       }
     });
   }
 
-  doAssess(type){
-    console.log(type);
-    this.navCtrl.push(ListDoassessPage,{
-      Type: type
+  doAssess(){
+    console.log('doAssess function');
+    this.navCtrl.push(DoassessPage,{
+      Teacher_id: 2,
+      Form_id: 1
     });
   }
 
